@@ -12,14 +12,14 @@ int sum=2;
 int prevFib=1, nextFib=2;
 
 while(1){
-	if(nextFib > _CAP){
-	 	break; 
-	 }
-	fib(&prevFib,&nextFib);
+    if(nextFib > _CAP){
+        break; 
+     }
+    fib(&prevFib,&nextFib);
 
-	if(isEven(nextFib)){
-		sum+=nextFib;
-	 }
+    if(isEven(nextFib)){
+        sum+=nextFib;
+     }
 
  }
 
@@ -33,10 +33,10 @@ return 1;
 
 //Checks if number is even
 bool isEven(int num){
-	if(0==(num%2))
-		return true;
-	else
-		return false;
+    if(0==(num%2))
+        return true;
+    else
+        return false;
 }
 
 
@@ -44,8 +44,8 @@ bool isEven(int num){
 //Moves newest to oldest
 //Generates next number and places it in newest
 void fib(int* oldest, int* newest){
-	int temp = *(newest);
+    int temp = *(newest);
 
-	*(newest) = *(oldest)+*(newest);
-	*(oldest) =  temp;
+    *(newest) = *(oldest)+*(newest);
+    *(oldest) =  temp;
 }
