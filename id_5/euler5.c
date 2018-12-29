@@ -36,3 +36,9 @@ printf("The smallest number evenly divisible by all integers between 1 and %d is
 
 return 1;
 }
+
+/*** This is the easiest way out. 
+        A more efficient method I've read about is to compute the prime factors of the divisors you want.
+        For each base take the highest exponent that occurs throughout all the prime factorizations and mutliply them together
+        Read about the method here: http://mathforum.org/library/drmath/view/62527.html
+***/
