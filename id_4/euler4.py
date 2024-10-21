@@ -21,20 +21,13 @@ for a0 in range(t):
         continue
     
     products = set()
-    factorOne = 1
-    factorTwo = 1
     for factorOne in range(100, 1000):
         for factorTwo in range(factorOne, 1000):
             p = factorOne * factorTwo
             if p > n:
                 break
-            products.add(p)
-    
-    while products:
-        largest = max(products)
-        
-        if isPalindrome(largest):
-            print(largest)
-            break
-        else:
-            products.remove(largest)
+            if isPalindrome(p):
+                products.add(p)
+
+    largest = max(products)
+    print(largest)
