@@ -28,3 +28,15 @@ function maxProfit(prices: number[]): number {
   // Check if there was a profitable transaction
   return Math.max(idealTransaction.difference, 0);
 };
+
+/** Notes:
+ * In my solution, I am using the buyDay as the left pointer for the 'window'(not a real window). i is the right ptr
+ * This is problematic because if a new lowest value occurs later in the array, the buyDay is updated
+ * But it is not guaranteed that a greater diffence will be found after said value.
+ * For example, in the test case [7, 2, 6, 7, 9, 1, 6]
+ * The greatest diff is between indexes 1 & 4 with 7
+ * But the buyDay will end up being index 5, since 1 is less than 2. 
+ * There is no greater profit to be made after that though
+ * 
+ * Solution: Use seperate left pointer and only update buyDay max diff is found
+ */
