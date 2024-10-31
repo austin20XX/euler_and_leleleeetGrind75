@@ -32,6 +32,5 @@ function maxSubArray(nums: number[]): number {
       }
   }
 
-  console.log(highestSubarray.subarray[0] + ' ' + highestSubarray.subarray[1]);
   return highestSubarray.sum;
 };

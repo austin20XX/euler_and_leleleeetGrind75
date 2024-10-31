@@ -4,7 +4,7 @@ function merge(intervals: number[][]): number[][] {
 
   // Attempt 2
   // Now at this point, I should treat the process like a 'reducer' of sorts.
-  // If current element is overlapping the previous(NOT NEXT, LOOK BACK NOT FORWARDS)
+  // If current element is overlapping the previous
   // Merge it with the previous
 
   // Because we're looking backwards for reduction, good to start with an element in the returned array
@@ -30,7 +30,7 @@ function merge(intervals: number[][]): number[][] {
   return mergedIntervals;
   
   /** 
-  Attempt 1, this joint just aint working out. Cryptic. Looks forward instead of backwards. Ignores the previously merged intervals when comparing which is a big mistake. Not good at catching edge cases
+  Attempt 1, this joint just aint working out. Cryptic. . Ignores the previously merged intervals when comparing which is a big mistake. Not good at catching edge cases
 
   let didMergeFinalInterval = false;
 
